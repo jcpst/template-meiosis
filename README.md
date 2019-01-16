@@ -35,3 +35,9 @@ This is copied from from my [hyperapp template](https://github.com/jcpst/templat
 Then hit up port 8080 and start hacking away!
 
 Format with: `npm run format`
+
+### Structure
+
+**TODO**: No tests yet. Add what you like to use!
+
+I took inspiration from playing around with Vue and the idea of a [single file components](https://vuejs.org/v2/guide/single-file-components.html). So I have the state, actions and view in the same file. I find it more pleasant to navigate than switching between several buffers.
