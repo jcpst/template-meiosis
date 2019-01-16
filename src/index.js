@@ -1,3 +1,4 @@
+import 'w3-css'
 import { h, render } from 'preact'
 import { scan, stream } from 'flyd'
 import { P } from 'patchinko/explicit'

@@ -5,6 +5,7 @@ function skyOption({ state, actions, value, label }) {
   return (
     <label>
       <input
+        className="w3-radio"
         type="radio"
         id={value}
         name="sky"
@@ -35,9 +36,10 @@ export const conditions = {
 }
 
 export const Conditions = ({ state, actions }) => (
-  <div>
-    <label>
+  <div className="w3-container">
+    <label >
       <input
+        className="w3-check"
         type="checkbox"
         checked={state.conditions.precipitations}
         onChange={e => actions.togglePrecip(e.target.checked)}
