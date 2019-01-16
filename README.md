@@ -19,6 +19,8 @@ Features include:
 * auto-formatting
 * gh-pages deployment (example: [this template](https://github.com/jcpst/template-meiosis))
 
+Example deployed [here](https://jcpst.github.io/template-meiosis/).
+
 ### Why
 
 I like small libraries, where reading the source code is pleasant. Compose a few of these together and you can have a powerful foundation with a deep understanding of what the guts are doing.
