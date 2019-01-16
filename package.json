@@ -1,0 +1,47 @@
+{
+  "name": "template-hyperapp-1",
+  "version": "0.0.1",
+  "description": "A biolerplate for hacking away at hyperapp.",
+  "scripts": {
+    "build": "webpack --config ./build/webpack.prod.js",
+    "deploy": "gh-pages -d dist",
+    "format": "prettier --write --no-semi --single-quote \"{src,build}/**/*.js\"",
+    "start": "webpack-dev-server --config ./build/webpack.dev.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "hyperapp",
+    "template",
+    "ui",
+    "w3-css"
+  ],
+  "author": "Joseph Post <joe@jcpst.com> (http://jcpst.com)",
+  "repository": "jcpst/template-hyperapp-1",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-preset-env": "^1.7.0",
+    "css-loader": "^0.28.11",
+    "gh-pages": "^2.0.1",
+    "glob": "^7.1.2",
+    "mini-css-extract-plugin": "^0.4.0",
+    "optimize-css-assets-webpack-plugin": "^4.0.2",
+    "prettier": "^1.13.4",
+    "purify-css": "^1.2.5",
+    "purifycss-webpack": "^0.7.0",
+    "style-loader": "^0.21.0",
+    "uglifyjs-webpack-plugin": "^1.2.5",
+    "webpack": "^4.11.1",
+    "webpack-cli": "^3.0.3",
+    "webpack-dev-server": "^3.1.14",
+    "webpack-merge": "^4.1.2"
+  },
+  "dependencies": {
+    "flyd": "^0.2.8",
+    "patchinko": "^4.1.0",
+    "preact": "^8.4.2",
+    "w3-css": "^4.1.0"
+  }
+}
