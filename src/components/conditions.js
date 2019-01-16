@@ -10,7 +10,8 @@ function skyOption({ state, actions, value, label }) {
         name="sky"
         value={value}
         checked={state.conditions.sky === value}
-        onChange={e => actions.changeSky(e.target.value)} />
+        onChange={e => actions.changeSky(e.target.value)}
+      />
       {label}
     </label>
   )
@@ -20,7 +21,7 @@ export const conditions = {
   initState: {
     conditions: {
       precipitations: false,
-      sky: 'sunny'
+      sky: 'SUNNY'
     }
   },
   actions: update => ({
@@ -39,23 +40,29 @@ export const Conditions = ({ state, actions }) => (
       <input
         type="checkbox"
         checked={state.conditions.precipitations}
-        onChange={e => actions.togglePrecip(e.target.checked)} 
+        onChange={e => actions.togglePrecip(e.target.checked)}
       />
       Precipitations
-      </label>
+    </label>
     <div>
       {skyOption({
-        state, actions, value: "SUNNY",
-        label: "Sunny"
+        state,
+        actions,
+        value: 'SUNNY',
+        label: 'Sunny'
       })}
       {skyOption({
-        state, actions, value: "CLOUDY",
-        label: "Cloudy"
+        state,
+        actions,
+        value: 'CLOUDY',
+        label: 'Cloudy'
       })}
       {skyOption({
-        state, actions, value: "MIX",
-        label: "Mix of sun/clouds"
+        state,
+        actions,
+        value: 'MIX',
+        label: 'Mix of sun/clouds'
       })}
     </div>
   </div>
-);
+)

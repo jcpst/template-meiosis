@@ -16,14 +16,14 @@ export const app = {
 
 export class App extends Component {
   componentWillMount() {
-    var setState = this.setState.bind(this);
+    var setState = this.setState.bind(this)
     this.props.states.map(function(state) {
-      setState(state);
-    });
+      setState(state)
+    })
   }
   render() {
-    var state = this.state;
-    var { actions } = this.props;
+    var state = this.state
+    var { actions } = this.props
     return (
       <div>
         <Conditions state={state} actions={actions} />

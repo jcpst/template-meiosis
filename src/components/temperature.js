@@ -6,7 +6,7 @@ export const temperature = {
   initState: () => ({
     value: 22,
     units: 'C'
-  }), 
+  }),
   actions: update => ({
     increment(id, amount) {
       update({
@@ -29,22 +29,13 @@ export const temperature = {
 export const Temperature = ({ state, id, actions }) => (
   <div>
     {state[id].label} Temperature:
-      {state[id].value} &deg; {state[id].units}
+    {state[id].value} &deg; {state[id].units}
     <div>
-      <button
-        onClick={() => actions.increment(id, 1)}>
-        Increment
-        </button>
-      <button
-        onClick={() => actions.increment(id, -1)}>
-        Decrement
-        </button>
+      <button onClick={() => actions.increment(id, 1)}>Increment</button>
+      <button onClick={() => actions.increment(id, -1)}>Decrement</button>
     </div>
     <div>
-      <button
-        onClick={() => actions.changeUnits(id)}>
-        Change Units
-        </button>
+      <button onClick={() => actions.changeUnits(id)}>Change Units</button>
     </div>
   </div>
 )
