@@ -37,7 +37,7 @@ export const conditions = {
 
 export const Conditions = ({ state, actions }) => (
   <div className="w3-container">
-    <label >
+    <label>
       <input
         className="w3-check"
         type="checkbox"

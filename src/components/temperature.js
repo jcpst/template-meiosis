@@ -41,18 +41,33 @@ export const temperature = {
 
 export const Temperature = ({ state, id, actions }) => (
   <div className="w3-half w3-container">
-  <div className="w3-card-4">
-    <header className="w3-center w3-grey">
-      <h3>{state[id].label}</h3>
-    </header>
-    <div className="w3-center w3-large">
-    {state[id].value} &deg; {state[id].units}
+    <div className="w3-card-4">
+      <header className="w3-center w3-grey">
+        <h3>{state[id].label}</h3>
+      </header>
+      <div className="w3-center w3-large">
+        {state[id].value} &deg; {state[id].units}
+      </div>
+      <div className="w3-bar">
+        <button
+          className={`w3-button w3-${colorSelector(id)}`}
+          onClick={() => actions.increment(id, 1)}
+        >
+          +
+        </button>
+        <button
+          className={`w3-button w3-${colorSelector(id)}`}
+          onClick={() => actions.increment(id, -1)}
+        >
+          -
+        </button>
+        <button
+          className={`w3-button w3-${colorSelector(id)} w3-right`}
+          onClick={() => actions.changeUnits(id)}
+        >
+          Convert
+        </button>
+      </div>
     </div>
-    <div className="w3-bar">
-      <button className={`w3-button w3-${colorSelector(id)}`} onClick={() => actions.increment(id, 1)}>+</button>
-      <button className={`w3-button w3-${colorSelector(id)}`} onClick={() => actions.increment(id, -1)}>-</button>
-      <button className={`w3-button w3-${colorSelector(id)} w3-right`} onClick={() => actions.changeUnits(id)}>Convert</button>
-    </div>
-  </div>
   </div>
 )
